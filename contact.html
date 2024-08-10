@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amrit Vidyalaya Contact</title>
+
+    <!--icons cdn links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="contact.css">
+
+    <!--Additional Script Links-->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <!--Navigation Bar html Code-->
+        <nav>
+            <img src="assets/Image/logo.png" alt="">
+            <div class="navigation">
+                <ul>
+                    <i id="menu-close" class="fa-solid fa-xmark"></i>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admission.html">Admission</a></li>
+                    <li><a class="active" href="contact.html">Contact</a></li>
+                </ul>
+                <img id="menu-btn" src="assets/Image/menu.png" alt="">
+            </div>
+        </nav>
+
+        <!--Contact Home html Code-->
+        <section id="contact-home">
+            <h2>Contact Us</h2>
+        </section>
+
+        <!--Contact Form html Code-->
+        <section id="contact">
+            <div class="container">
+                <div class="form">
+                    <div class="contact-info">
+                        <h3 class="title">Let's get in touch</h3>
+                        <p>We're here to help and answer any questions you may have. Whether you're interested in admissions, our programs, or have any other inquiries, we'd love to hear from you. Please fill out the form below or reach out to us directly. Let's connect and make a difference together at Amrit Vidyalaya!</p> <br>
+
+                        <div class="info">
+                            <div class="information">
+                                <img src="assets/Image/location.png" class="icon" alt="" />
+                                <p>Amritvidyalaya
+
+                                    Kalol-Malav Road, At Aata, Po. Alva, Tal. Kalol – 389310</p>
+                            </div>
+                            <div class="information">
+                                <img src="assets/Image/email.png" class="icon" alt="" />
+                                <p>info@amritvidyalaya.org</p>
+                            </div>
+                            <div class="information">
+                                <img src="assets/Image/phone.png" class="icon" alt="" />
+                                <p>+91 78781 40066</p>
+                            </div>
+                        </div>
+
+                        <div class="social-media">
+                            <p>Connect with us :</p>
+                            <div class="social-icons">
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <span class="circle one"></span>
+                        <span class="circle two"></span>
+
+                        <form action="home.html" autocomplete="off">
+                            <h3 class="title">Contact us</h3>
+                            <div class="input-container">
+                                <input type="text" name="name" class="input" />
+                                <label for="">Username</label>
+                                <span>Username</span>
+                            </div>
+                            <div class="input-container">
+                                <input type="email" name="email" class="input" />
+                                <label for="">Email</label>
+                                <span>Email</span>
+                            </div>
+                            <div class="input-container">
+                                <input type="tel" name="phone" class="input" />
+                                <label for="">Phone</label>
+                                <span>Phone</span>
+                            </div>
+                            <div class="input-container textarea">
+                                <textarea name="message" class="input"></textarea>
+                                <label for="">Message</label>
+                                <span>Message</span>
+                            </div>
+                            <input type="submit" value="Send" class="btn" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <footer>
+        <p class="left">&copy; 2016 Amrit Vidyalaya</p>
+        <p class="right">Amrit Vidyalaya</p>
+    </footer>
+</body>
+<script>
+
+$('#menu-btn').click(function () {
+      $('nav .navigation ul').addClass('active')
+    });
+    $('#menu-close').click(function () {
+      $('nav .navigation ul').removeClass('active')
+    });
+
+    const inputs = document.querySelectorAll(".input");
+
+    function focusFunc() {
+        let parent = this.parentNode;
+        parent.classList.add("focus");
+    }
+
+    function blurFunc() {
+        let parent = this.parentNode;
+        if (this.value == "") {
+            parent.classList.remove("focus");
+        }
+    }
+
+    inputs.forEach((input) => {
+        input.addEventListener("focus", focusFunc);
+        input.addEventListener("blur", blurFunc);
+    });
+</script>
+
+</html>

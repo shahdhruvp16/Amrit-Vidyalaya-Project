@@ -1,0 +1,625 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wdht@100;200;300;400;500;600;700;800;900&display=swap");
+
+/*Whole Body and Universal Tag Css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/*Navigation Bar Css*/
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: #f7f0f0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw 4vw;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+}
+
+nav .img{
+  width: 150px;
+  cursor: pointer;
+}
+
+nav .navigation ul{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav .navigation ul li{
+  list-style: none;
+  margin-left: 30px;
+}
+
+nav .navigation ul li a{
+  text-decoration: none;
+  color: rgb(21, 21, 100);
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+nav .navigation ul li a:hover{
+  color: red;
+}
+
+#menu-btn {
+	width: 40px;
+	height: 30px;
+	margin: 15px auto;
+	display: none;
+  }
+  
+  #menu-close {
+	display: none;
+  }
+
+/*Academics Home Css*/
+#acd-home {
+    background-image: linear-gradient(rgba(9, 4, 63, 0.3), rgba(5, 4, 46, 0.7)),
+      url("assets/Image/team.jpg");
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  #acd-home h2 {
+    color: #f1ededdd;
+    font-size: 4.5rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+
+  /*Academic Process Timeline Css*/
+  .process-wrapper {
+	margin:auto;
+	max-width:1080px;
+}
+
+#progress-bar-container {
+	position:relative;
+	width:90%;
+	margin:auto;
+	height:100px;
+	margin-top:65px;
+}
+
+#progress-bar-container ul {
+	padding:0;
+	margin:0;
+	padding-top:15px;
+	position:absolute;
+	width:100%;
+	margin-top:-40px
+}
+
+#progress-bar-container li:before {
+	content:" ";
+	display:block;
+	margin:auto;
+	width:30px;
+	height:30px;
+	border-radius:50%;
+	border:solid 2px #aaa;
+	transition:all ease 0.3s;
+     
+}
+
+#progress-bar-container li.active:before, #progress-bar-container li:hover:before {
+	border:solid 2px #fff;
+       	 
+	background: linear-gradient(to right, #d70e0e 0%,#fff 100%); 
+}
+
+#progress-bar-container li {
+	list-style:none;
+	float:left;
+	width:20%;
+	text-align:center;
+	color:#aaa;
+	text-transform:uppercase;
+	font-size:11px;
+	cursor:pointer;
+	font-weight:700;
+	transition:all ease 0.2s;
+	vertical-align:bottom;
+	height:60px;
+	position:relative;
+}
+
+#progress-bar-container li .step-inner {
+	position:absolute;
+	width:100%;
+	bottom:0;
+    font-size: 14px;
+}
+
+#progress-bar-container li.active, #progress-bar-container li:hover {
+	color:#444;
+}
+
+#progress-bar-container li:after {
+	content:" ";
+	display:block;
+	width:6px;
+	height:6px;
+	background:#777;
+	margin:auto;
+	border:solid 7px #fff;
+	border-radius:50%;
+	margin-top:40px;
+	box-shadow:0 2px 13px -1px rgba(0,0,0,0.3);
+	transition:all ease 0.2s;
+     
+}
+
+#progress-bar-container li:hover:after {
+	background:#555;
+}
+
+#progress-bar-container li.active:after {
+	background:#d70e0e;
+}
+
+#progress-bar-container #line {
+	width:80%;
+	margin:auto;
+	background: #eee;
+	height:6px;
+	position:absolute;
+	left:10%;
+	top:57px;
+	z-index:1;
+	border-radius:50px;
+	transition:all ease 0.9s;
+}
+
+#progress-bar-container #line-progress {
+	content:" ";
+	width:3%;
+	height:100%;
+	background: #d70e0e;	 
+	background: linear-gradient(to right, #d70e0e 0%,#fff 100%); 
+	position:absolute;
+	z-index:2;
+	border-radius:50px;
+	transition:all ease 0.9s;
+}
+
+#progress-content-section {
+	width:90%;
+	margin: 30px auto;
+	background: #f3f3f3;
+	border-radius: 4px;
+}
+
+#progress-content-section .section-content {
+	padding:30px 40px;
+	text-align:center;
+}
+
+#progress-content-section .section-content h2 {
+	font-size:17px;
+	text-transform:uppercase;
+	color:rgb(0, 0, 0);
+	letter-spacing:1px;
+}
+#progress-content-section .section-content img {
+  margin: 10px 0 10px 10px;
+}
+
+
+#progress-content-section .section-content p {
+	font-size:16px;
+	line-height:1.8em;
+	color:#777;
+}
+
+#progress-content-section .section-content {
+	display:none;
+	animation: FadeInUp 700ms ease 1;
+	animation-fill-mode:forwards;
+	transform:translateY(15px);
+	opacity:0;
+}
+
+#progress-content-section .section-content.active {
+	display:block;
+}
+
+@keyframes FadeInUp {
+	0% {
+		transform:translateY(15px);
+		opacity:0;
+	}
+	
+	100% {
+		transform:translateY(0px);
+		opacity:1;
+	}
+}
+
+/*Academic Faculty Css*/
+
+
+
+
+/*Academics Footer Css*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px auto;
+  }
+  
+  footer .left {
+    margin: 0;
+    padding: 0;
+    margin-left: 50px;
+  }
+  
+  footer .right {
+    margin: 0;
+    padding: 0;
+    margin-right: 50px;
+  }
+
+  /*Making Responsive*/
+@media screen and (max-width: 769px) {
+	nav {
+	  padding: 15px 20px;
+	  z-index: 9999;
+	}
+  
+	nav img {
+	  width: 50px;
+	}
+  
+	#menu-btn {
+	  display: initial;
+	}
+  
+	#menu-close {
+	  display: initial;
+	  font-size: 1.6rem;
+	  color: #100e0e;
+	  padding: 30px 0 20px 20px;
+	}
+  
+	nav .navigation ul {
+	  position: absolute;
+	  top: 0;
+	  right: -220px;
+	  width: 200px;
+	  height: 100vh;
+	  background: rgba(223, 202, 202, 0.45);
+	  backdrop-filter: blur(100px);
+	  border: 1px solid rgba(255, 255, 255, 0.18);
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: flex-start;
+	  align-items: flex-start;
+	}
+  
+	nav .navigation ul.active {
+	  right: 0;
+	}
+  
+	nav .navigation ul li {
+	  padding: 50px 0 20px 30px;
+	  margin-left: 0;
+	}
+  
+	nav .navigation ul li a {
+	  color: #ffffff;
+	  font-size: 17px;
+	}
+
+	/*Academics Home Css*/
+#acd-home {
+    background-image: linear-gradient(rgba(9, 4, 63, 0.3), rgba(5, 4, 46, 0.7)),
+      url("assets/Image/team.jpg");
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  #acd-home h2 {
+    color: #f1ededdd;
+    font-size: 4.5rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 348px) {
+	nav {
+	  margin-left: px;
+	  z-index: 9999;
+	}
+  
+	nav img {
+	  width: 50px;
+	}
+  
+	#menu-btn {
+	  display: initial;
+	}
+  
+	#menu-close {
+	  display: initial;
+	  font-size: 1.6rem;
+	  color: #f8f2f2;
+	  padding: 30px 0 20px 20px;
+	}
+  
+	nav .navigation ul {
+	  position: absolute;
+	  top: 0;
+	  right: -220px;
+	  width: 220px;
+	  height: 100vh;
+	  background: rgba(128, 74, 74, 0.45);
+	  backdrop-filter: blur(4.5px);
+	  border: 1px solid rgba(255, 255, 255, 0.18);
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: flex-start;
+	  align-items: flex-start;
+	}
+  
+	nav .navigation ul.active {
+	  right: 0;
+	}
+  
+	nav .navigation ul li {
+	  padding: 50px 0 20px 30px;
+	}
+  
+	nav .navigation ul li a {
+	  color: #ffffff;
+	  font-size: 17px;
+	}
+
+	/*Academics Home Css*/
+#acd-home {
+    background-image: linear-gradient(rgba(9, 4, 63, 0.3), rgba(5, 4, 46, 0.7)),
+      url("assets/Image/team.jpg");
+    width: 108%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  #acd-home h2 {
+    color: #f1ededdd;
+    font-size: 4.5rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+
+    /*Academic Process Timeline Css*/
+	.process-wrapper {
+		margin:auto;
+		max-width:1080px;
+	}
+	
+	#progress-bar-container {
+		position:relative;
+		width:90%;
+		margin:auto;
+		height:100px;
+		margin-top:65px;
+	  	z-index: 999;
+	}
+	
+	#progress-bar-container ul {
+		padding:0;
+		margin:0;
+		padding-top:15px;
+		z-index:9999;
+		position:absolute;
+		width:110%;
+		margin-top:-40px
+	}
+	
+	#progress-bar-container li:before {
+		content:" ";
+		display:block;
+		margin:auto;
+		width:30px;
+		height:30px;
+		border-radius:50%;
+		border:solid 2px #aaa;
+		transition:all ease 0.3s;
+
+		 
+	}
+	
+	#progress-bar-container li.active:before, #progress-bar-container li:hover:before {
+		border:solid 2px #fff;
+			
+		background: linear-gradient(to right, #d70e0e 0%,#fff 100%); 
+	}
+	
+	#progress-bar-container li {
+		list-style: column;
+		float:left;
+		width:20%;
+		text-align:center;
+		color:#aaa;
+		text-transform:uppercase;
+		font-size:2px;
+		cursor:pointer;
+		font-weight:100;
+		transition:all ease 0.2s;
+		vertical-align:bottom;
+		height:70px;
+		position:relative;
+	}
+	
+	#progress-bar-container li .step-inner {
+		position:absolute;
+		width:100%;
+		bottom:0;
+		font-size: 12px;
+	}
+	
+	#progress-bar-container li.active, #progress-bar-container li:hover {
+		color:#444;
+
+	}
+	
+	#progress-bar-container li:after {
+		content:" ";
+		display:block;
+		width:6px;
+		height:6px;
+		background:#777;
+		margin:auto;
+		border:solid 7px #fff;
+		border-radius:50%;
+		margin-top:40px;
+		box-shadow:0 2px 13px -1px rgba(0,0,0,0.3);
+		transition:all ease 0.2s;
+		 
+	}
+	
+	#progress-bar-container li:hover:after {
+		background:#555;
+	}
+	
+	#progress-bar-container li.active:after {
+		background:#d70e0e;
+	}
+	
+	#progress-bar-container #line {
+		width:80%;
+		margin:auto;
+		background: #eee;
+		height:6px;
+		position:absolute;
+		left:10%;
+		top:57px;
+		z-index:1;
+		border-radius:50px;
+		transition:all ease 0.9s;
+	}
+	
+	#progress-bar-container #line-progress {
+		content:" ";
+		width:3%;
+		height:100%;
+		background: #d70e0e;	 
+		background: linear-gradient(to right, #d70e0e 0%,#fff 100%); 
+		position:absolute;
+		z-index:2;
+		border-radius:50px;
+		transition:all ease 0.9s;
+	}
+	
+	#progress-content-section {
+		width:90%;
+		margin: 30px auto;
+		background: #f3f3f3;
+		border-radius: 4px;
+		margin-right: -2.2px;
+	}
+	
+	#progress-content-section .section-content {
+		padding:30px 40px;
+		text-align:center;
+	}
+	
+	#progress-content-section .section-content h2 {
+		font-size:17px;
+		text-transform:uppercase;
+		color:rgb(0, 0, 0);
+		letter-spacing:1px;
+	}
+	#progress-content-section .section-content img {
+	  margin: 10px 0 10px 10px;
+	}
+	
+	
+	#progress-content-section .section-content p {
+		font-size:16px;
+		line-height:1.8em;
+		color:#777;
+	}
+	
+	#progress-content-section .section-content {
+		display:none;
+		animation: FadeInUp 700ms ease 1;
+		animation-fill-mode:forwards;
+		transform:translateY(15px);
+		opacity:0;
+	}
+	
+	#progress-content-section .section-content.active {
+		display:block;
+	}
+	
+	@keyframes FadeInUp {
+		0% {
+			transform:translateY(15px);
+			opacity:0;
+		}
+		
+		100% {
+			transform:translateY(0px);
+			opacity:1;
+		}
+	}
+
+	/*Academics Footer Css*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px auto;
+  }
+  
+  footer .left {
+    margin: 0;
+    padding: 0;
+    margin-right: 30px;
+  }
+  
+  footer .right {
+    margin: 0;
+    padding: 0;
+    margin-right: -15px;
+  }
+}

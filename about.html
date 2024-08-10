@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amrit Vidyalaya About</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="about.css" />
+
+    <!--Additional Script Links-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <!--Navigation Bar html Code-->
+        <nav>
+            <img src="assets/Image/logo.png" alt="">
+            <div class="navigation">
+                <ul>
+                    <i id="menu-close" class="fa-solid fa-xmark"></i>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a class="active" href="about.html">About</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admission.html">Admission</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <img id="menu-btn" src="assets/Image/menu.png" alt="">
+            </div>
+        </nav>
+
+        <!--About Home html Code-->
+        <section id="about-home">
+            <h2>About Amrit Vidyalaya</h2>
+        </section>
+
+        <section id="about-data">
+            <div class="about-txt">
+                <img src="assets/Image/a.png" alt="" />
+                <p>
+                    Amrit Vidyalaya higher secondary school that prepares students from
+                    Kalol and the vicinity around from semi rural area of Panchmahal
+                    district for higher study and the ever changing world.Amrit Vidyalaya higher secondary school that prepares students from
+          
+                </p>
+                <br />
+            </div>
+        </section>
+
+        <!--Features About School html Code-->
+        <section id="features">
+            <div class="fea-base">
+                <div class="fea-box">
+                    <i class="fa-solid fa-computer"></i>
+                    <h6>It Enabled clasrooms</h6>
+                    <p>it enabled classrooms</p>
+                </div>
+                <div class="fea-box">
+                    <i class="fa-solid fa-medal"></i>
+                    <h6>Intership Program</h6>
+                    <p>it enabled classrooms</p>
+                </div>
+                <div class="fea-box">
+                    <i class="fa-solid fa-book"></i>
+                    <h6>Library</h6>
+                    <p>it enabled classrooms</p>
+                </div>
+                <div class="fea-box">
+                    <i class="fa-brands fa-google-scholar"></i>
+                    <h6>scholarship</h6>
+                    <p>it enabled classrooms</p>
+                </div>
+                <div class="fea-box">
+                    <i class="fa-solid fa-earth-africa"></i>
+                    <h6>Field trips/Excursion</h6>
+                    <p>it enabled classrooms</p>
+                </div>
+                <div class="fea-box">
+                    <i class="fa-regular fa-flag"></i>
+                    <h6>Nourishing Meal</h6>
+                    <p>it enabled classrooms</p>
+                </div>
+            </div>
+        </section>
+
+        <!--Gallery html Code-->
+        <section id="gallery">
+            <div class="gallery-button-container">
+                <div class="gallery-button" onclick="openGallery(1)">
+                    <img src="image/are.jpg" alt="Gallery 1" class="button-image">
+                    <p>Toppers</p>
+                </div>
+                <div class="gallery-button" onclick="openGallery(2)">
+                    <img src="image/are.jpg" alt="Gallery 2" class="button-image">
+                    <p>Events</p>
+                </div>
+                <div class="gallery-button" onclick="openGallery(3)">
+                    <img src="image/are.jpg" alt="Gallery 3" class="button-image">
+                    <p>Infrastructure</p>
+                </div>
+            </div>
+
+            <div id="popup" class="popup">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <img id="popup-img" src="" alt="Gallery Image">
+                <button class="nav-button" id="prev-button" onclick="changeImage(-1)">←</button>
+                <button class="nav-button" id="next-button" onclick="changeImage(1)">→</button>
+            </div>
+        </section>
+
+        <!--Vision And Mission html Code-->
+        <section id="vnm">
+            <h2>Vision and Mission</h2>
+        </section>
+        <section id="patrons">
+    </header>
+
+    <footer>
+        <p class="left">&copy; 2016 Amrit Vidyalaya</p>
+        <p class="right">Amrit Vidyalaya</p>
+    </footer>
+</body>
+<script>
+    $('#menu-btn').click(function () {
+        $('nav .navigation ul').addClass('active')
+    });
+    $('#menu-close').click(function () {
+        $('nav .navigation ul').removeClass('active')
+    });
+
+    let currentGallery = 0;
+    let currentImageIndex = 0;
+    const galleries = [
+        ["image/infrastructure/i1.jpg", "image/infrastructure/i2.jpg", "image/infrastructure/i3.jpg", "image/infrastructure/i4.jpg", "image/infrastructure/i5.jpg", "image/infrastructure/i6.jpg"],
+        ["image/are.jpg", "image/you.jpg", "image/how.jpg"],
+        ["image/why.jpeg", "image/who.jpeg", "image/what.jpg"]
+    ];
+
+    function openGallery(galleryIndex) {
+        currentGallery = galleryIndex - 1;
+        currentImageIndex = 0;
+        document.getElementById('popup-img').src = galleries[currentGallery][currentImageIndex];
+        document.getElementById('popup').style.display = 'flex';
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+
+    function changeImage(direction) {
+        currentImageIndex += direction;
+        if (currentImageIndex < 0) {
+            currentImageIndex = galleries[currentGallery].length - 1;
+        } else if (currentImageIndex >= galleries[currentGallery].length) {
+            currentImageIndex = 0;
+        }
+        document.getElementById('popup-img').src = galleries[currentGallery][currentImageIndex];
+    }
+</script>
+
+</html>
